@@ -1,0 +1,50 @@
+body,
+html {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #f0f0f0; /* Example background color */
+}
+
+.card-container {
+  width: 600px; /* Increased container width for better spacing */
+  height: 200px;
+  perspective: 1000px; /* Perspective for 3D effect */
+}
+
+.card {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 200px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  transition: transform 0.5s, opacity 0.5s;
+  transform-style: preserve-3d; /* Allows for 3D rotation */
+  background-color: white; /* Background for visibility */
+}
+
+#card1 {
+  transform: translateX(0) rotateY(0deg) scale(1);
+}
+#card2 {
+  transform: translateX(-250px) rotateY(-30deg) scale(0.8);
+  opacity: 0.8;
+}
+#card3 {
+  transform: translateX(250px) rotateY(30deg) scale(0.8);
+  opacity: 0.8;
+}
+
+.controls {
+  margin-top: 20px;
+}
