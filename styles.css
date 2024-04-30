@@ -88,9 +88,10 @@ h2 {
 
 .controls {
   position: fixed;
-  bottom: 20px;
+  bottom: 50px; /* Raise the controls above the attributes box */
   width: 100%;
   text-align: center;
+  z-index: 15; /* Ensure controls are above other elements */
 }
 
 .card img {
@@ -115,4 +116,32 @@ h2 {
   background-color: gold;
   color: black;
   cursor: pointer;
+}
+.attributes-box {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  bottom: 0; /* Positioned at the bottom of the page */
+  padding: 10px;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.9
+  ); /* Adjust transparency as needed */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow for depth */
+}
+
+#attributes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto; /* Center the list in its container */
+  display: flex;
+  justify-content: space-around;
+  max-width: 800px; /* Optional: constrain the list width for better formatting */
+}
+
+#attributes-list li {
+  display: inline-block;
+  padding: 0 10px;
 }
