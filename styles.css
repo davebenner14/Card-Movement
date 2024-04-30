@@ -74,8 +74,8 @@ h2 {
 }
 
 .card-face.card-back {
-  background-color: #ddd; /* Clearly different background */
-  color: black; /* Different text color if needed */
+  background-color: #ddd;
+  color: black;
   transform: rotateY(180deg);
 }
 
@@ -89,10 +89,10 @@ h2 {
 
 .controls {
   position: fixed;
-  bottom: 50px; /* Raise the controls above the attributes box */
+  bottom: 50px;
   width: 100%;
   text-align: center;
-  z-index: 15; /* Ensure controls are above other elements */
+  z-index: 15;
 }
 
 .card img {
@@ -122,27 +122,80 @@ h2 {
   width: 100%;
   text-align: center;
   position: fixed;
-  bottom: 0; /* Positioned at the bottom of the page */
+  bottom: 0;
   padding: 10px;
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.9
-  ); /* Adjust transparency as needed */
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2); /* Optional: adds a subtle shadow for depth */
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
 }
 
 #attributes-list {
   list-style: none;
   padding: 0;
-  margin: 0 auto; /* Center the list in its container */
+  margin: 0 auto;
   display: flex;
   justify-content: space-around;
-  max-width: 800px; /* Optional: constrain the list width for better formatting */
+  max-width: 800px;
 }
 
 #attributes-list li {
   display: inline-block;
   padding: 0 10px;
+}
+.card-section {
+  display: none;
+}
+.controls button,
+.design-button {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+.controls button:hover,
+.design-button:hover {
+  background-color: #555;
+}
+.design-button {
+  display: block;
+  width: 80%;
+  margin: 20px auto;
+  font-size: 1.2em;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+}
+.controls,
+.design-button-container {
+  text-align: center;
+}
+@media (max-width: 600px) {
+  .card-container,
+  .controls,
+  .design-button-container {
+    width: 100%;
+    padding: 0 10px;
+  }
+
+  .card h3,
+  .flip-button {
+    font-size: 1em;
+  }
+
+  .design-button {
+    width: 90%;
+  }
+  .card-face.card-front {
+    background-color: transparent !important;
+  }
+  .box {
+    padding: 5px;
+    font-size: 12px;
+  }
+  #attributes-list li {
+    flex-basis: 60%;
+    padding: 2px 5px;
+    font-size: 0.8rem;
+  }
 }

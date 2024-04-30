@@ -1,9 +1,3 @@
-/* Reset */
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-
 html,
 body,
 div,
@@ -93,7 +87,6 @@ video {
   vertical-align: baseline;
 }
 
-/* HTML5 display-role reset for older browsers */
 article,
 aside,
 details,
@@ -129,7 +122,6 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-/* End of reset */
 body* > {
   box-sizing: border-box;
 }
@@ -345,7 +337,6 @@ html {
   padding: 0;
   width: 100%;
   height: 100%;
-  /* background-color: black; */
   color: white;
   font-family: Arial, sans-serif;
 }
@@ -389,5 +380,23 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  /* background-color: #6d6969; */
+}
+
+@media (max-width: 600px) {
+  .card-container,
+  .controls {
+    width: 95%; /* Increase width for small devices */
+  }
+
+  .card h3 {
+    font-size: 1em; /* Smaller text on smaller screens */
+  }
+
+  .flip-button {
+    padding: 8px 16px; /* Smaller buttons on mobile */
+  }
+
+  #attributes-list li {
+    flex-basis: 100%; /* One item per row on very small screens */
+  }
 }
