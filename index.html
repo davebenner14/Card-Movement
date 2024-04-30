@@ -20,36 +20,69 @@
         <div class="card-face card-front">
           <img src="assets/paladin.png" alt="Paladin" />
           <h3>Paladin</h3>
-          <button class="flip-button">Flip Card</button>
+          <button
+            class="flip-button"
+            aria-label="Flip card to view details about Paladin"
+          >
+            Flip Card
+          </button>
         </div>
         <div class="card-face card-back">
           <p>Paladin's detailed description...</p>
+          <button
+            class="flip-button"
+            aria-label="Flip card back to view Paladin front"
+          >
+            Flip Back
+          </button>
         </div>
       </div>
       <div class="card" id="card2">
         <div class="card-face card-front">
           <img src="assets/ranger.png" alt="Ranger" />
           <h3>Ranger</h3>
-          <button class="flip-button">Flip Card</button>
+          <button
+            class="flip-button"
+            aria-label="Flip card to view details about Ranger"
+          >
+            Flip Card
+          </button>
         </div>
         <div class="card-face card-back">
           <p>Ranger's detailed description...</p>
+          <button
+            class="flip-button"
+            aria-label="Flip card back to view Ranger front"
+          >
+            Flip Back
+          </button>
         </div>
       </div>
       <div class="card" id="card3">
         <div class="card-face card-front">
           <img src="assets/wizard.png" alt="Wizard" />
           <h3>Wizard</h3>
-          <button class="flip-button">Flip Card</button>
+          <button
+            class="flip-button"
+            aria-label="Flip card to view details about Wizard"
+          >
+            Flip Card
+          </button>
         </div>
         <div class="card-face card-back">
           <p>Wizard's detailed description...</p>
+          <button
+            class="flip-button"
+            aria-label="Flip card back to view Wizard front"
+          >
+            Flip Back
+          </button>
         </div>
       </div>
     </div>
     <div class="controls">
-      <button onclick="rotateLeft()">←</button>
-      <button onclick="rotateRight()">→</button>
+      <button onclick="rotateLeft()" aria-label="Rotate cards left">←</button>
+      <button onclick="rotateRight()" aria-label="Rotate cards right">→</button>
     </div>
     <script src="script.js"></script>
   </body>

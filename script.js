@@ -34,7 +34,8 @@ function updateCards() {
   document.body.style.backgroundImage = `url('${backgrounds[position]}')`;
 }
 document.querySelectorAll(".flip-button").forEach((button) => {
-  button.addEventListener("click", function () {
+  button.addEventListener("click", function (event) {
+    event.stopPropagation(); // Prevents the rotation function from being triggered
     let card = button.closest(".card");
     card.classList.toggle("is-flipped");
   });
