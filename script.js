@@ -1,6 +1,11 @@
-let position = 0; // Tracks the current front card index
+let position = 0;
 const cards = document.querySelectorAll(".card");
 const titles = document.querySelectorAll("h2");
+const backgrounds = [
+  "assets/paladin_background.jpeg",
+  "assets/ranger_background.jpeg",
+  "assets/wizard_background.jpeg"
+];
 
 function rotateRight() {
   position = (position + 1) % 3;
@@ -26,4 +31,5 @@ function updateCards() {
   titles.forEach((title, i) => {
     title.style.opacity = i === position ? 1 : 0;
   });
+  document.body.style.backgroundImage = `url('${backgrounds[position]}')`;
 }
