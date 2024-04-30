@@ -33,3 +33,9 @@ function updateCards() {
   });
   document.body.style.backgroundImage = `url('${backgrounds[position]}')`;
 }
+document.querySelectorAll(".flip-button").forEach((button) => {
+  button.addEventListener("click", function () {
+    let card = button.closest(".card");
+    card.classList.toggle("is-flipped");
+  });
+});
